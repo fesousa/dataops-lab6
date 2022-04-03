@@ -125,6 +125,23 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem36.png" width='100%'/>
 
+4. Execute o Crawler
+
+    4.1. Selecione o checkbox ao no registro do Crawler criado
+
+    <img src="images/Imagem37.png" width='100%'/>
+ 
+    4.2. Clique em <img src="images/Imagem38.png" height='25'/> 
+
+    4.3. Clique no botão de atualizar (<img src="images/Imagem39.png" width='100%'/>) para atualizar o status (canto superior direito)
+
+    4.4. Aguarde até que o Status fique `Ready` novamente. Clique no atualizar de tempos em tempos para atualizar o status e verificar
+
+    4.5. Verifique a nova tabela criada clicando em <img src="images/Imagem40.png" width='100%'/> no menu lateral esquerdo
+
+    <img src="images/Imagem41.png" width='100%'/>
+
+
 
 
 <div class="footer">
