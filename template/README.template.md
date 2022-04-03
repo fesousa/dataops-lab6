@@ -35,9 +35,14 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
     
     Service Name:  <img src="images/Imagem5.png" height='25'/>
 
+    <div class="greenBorder" style=" #position: relative; #top: -50%">
+
     Type:  <img src="images/Imagem6.png" style="vertical-align:middle;" height='25'/>
+    
+    </div>
 
 
+    <img src="images/Imagem7.png" width='100%'/>
 
 
 <div class="footer">
