@@ -186,6 +186,28 @@ Se não houver, coloque essa consulta no editor e clique em <img src="images/Ima
 SELECT count(1) FROM "vacinas-database"."vacinas_input";
 ```
 
+## Inserir mais dados do Data Catalog
+
+1.	Na AWS, procure e abra o serviço `Lambda`
+
+2.	Selecione a função lambda `dataops-coleta-vacinas-ci-cd` criada no [Laboratório 4](https://github.com/fesousa/dataops-lab4)
+
+3.	Teste a função com o seguinte json
+
+```json
+{
+    "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAP/part-00000-e024f7cd-7ba2-4b64-a285-ad08d98b1135.c000.csv", 
+    "uf":"ap"
+}
+```
+
+
+A execução vai coletar dados de vacinação do Amapá e salvar no S3. Se precisar, veja no [Laboratório 4](https://github.com/fesousa/dataops-lab4) como testar a função lambda
+
+4.	Volte para o Amazon Athena e execute a consulta para contar a quantidade de registros novamente e verifique o resultado. Os dados do Amapá foram inseridos.
+
+5.	Ainda no Athena, execute uma consulta para contar quantos registros existem de cada Estado (campo `estabelecimento_uf`)
+
 
 
 
@@ -193,5 +215,5 @@ SELECT count(1) FROM "vacinas-database"."vacinas_input";
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 15:29:04
+Last update: 2022-04-03 15:37:28
 </div>
