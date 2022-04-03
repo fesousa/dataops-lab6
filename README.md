@@ -54,10 +54,48 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 <img src="images/Imagem12.png" width='100%'/>
 
 
+## Criar Crawler no AWS Glue
+
+1.	Procure na barra superior pelo serviço `Glue` e clique no serviço para abrir
+
+2.	No menu lateral esquerdo, procure e clique em  <img src="images/Imagem13.png" height='25'/>
+
+3.	Clique em <img src="images/Imagem14.png" height='25'/> e comece a configuração do novo Crawler
+
+    3.1. Nome do Crawler: `crawler-vacinas`
+
+    3.2. Clique em <img src="images/Imagem15.png" height='25'/>
+
+    3.3. Na tela seguinte, clique em <img src="images/Imagem16.png" height='25'/> novamente 
+
+    3.4. Na tela seguinte, configure o datastore
+
+    3.5. No campo <img src="images/Imagem17.png" height='25'/>  selecione <img src="images/Imagem18.png" height='25'/>
+
+    3.6. Clique em <img src="images/Imagem19.png" height='25'/>. No popup, configure a nova conexão:
+
+        a. Nome: `s3-connection`
+
+        b. VPC: selecione a única opção disponível
+
+        c. Subrede: selecione a primeira
+
+        d. Grupo de segurança: selecione `default`
+
+        e. Clique em <img src="images/Imagem20.png" height='25'/> 
+
+    3.7. Em conexão, selecione a conexão recém criada (`s3-connection`)
+
+    3.8. Em `Incluir caminho`, clique em <img src="images/Imagem21.png" height='25'/> para selecionar o bucket
+
+    3.9. No popup, selecione o bucket e pasta `dataops-impacta-dados-nomesobrenome/input` (bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1))
+
+
+
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 14:49:47
+Last update: 2022-04-03 15:00:50
 </div>
