@@ -33,7 +33,7 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
 5.	No resultado selecione a opção que tem seguintes características:
     
-    Service Name:  <img src=images/Imagem5.png" height='25'/>
+    Service Name:  <img src="images/Imagem5.png" height='25'/>
 
     Type:  <img src="images/Imagem5.png" height='25'/>
 
@@ -43,5 +43,5 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 14:18:32
+Last update: 2022-04-03 14:21:31
 </div>
