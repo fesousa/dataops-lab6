@@ -291,8 +291,66 @@ https://github.com/fesousa/dataops-lab6/blob/2738353683fb94c7f69c79c46396e445f77
     9.7. Se precisar editar o script, clique em <img src="images/Imagem79.png" height='25'/>  e depois em <img src="images/Imagem80.png" height='25'/>
 
  
+## Verificar tabela no Redshift e Executar Consultas
+
+1.	Na AWS, procure e abra o serviço `Redshift`
+
+2.	No menu lateral esquerdo clique em <img src="images/Imagem81.png" height='25'/> e depois em <img src="images/Imagem82.png" height='25'/> para abrir os clusters do Redshift
+
+3. Inicie o cluster caso ele estiver parado
+
+    3.1. Selecione o cluster criado no [Laboratório 5](https://github.com/fesousa/dataops-lab5) clicando no checkbox
+
+    <img src="images/Imagem83.png" width='100%'/>
+ 
+    3.2. Clique em  <img src="images/Imagem84.png" height='25'/> e depois em <img src="images/Imagem85.png" height='25'/>
+
+    3.3. Na próxima tela clique em <img src="images/Imagem86.png" height='25'/> 
+
+    3.4. Espere até que a coluna `Status` do cluster mostre <img src="images/Imagem87.png" height='25'/>
+
+4.	Depois que o cluster estiver executando, no menu lateral esquerdo clique em <img src="images/Imagem88.png" height='25'/> e depois em <img src="images/Imagem89.png" height='25'/>
+
+5.	Clique em <img src="images/Imagem90.png" height='25'/>
+
+6.	Configure a conexão como na imagem abaixo:
+
+<img src="images/Imagem91.png" width='100%'/>
+ 
+7.	Clique em <img src="images/Imagem92.png" height='25'/>
+
+8.	Na seção <img src="images/Imagem93.png" height='25'/>  verifique a configuração de conexão:
+
+    8.1. <img src="images/Imagem94.png" height='100'/>
 
 
+    8.2. <img src="images/Imagem95.png" height='100'/>
+
+
+    8.3. Você deve ver a tabela <img src="images/Imagem96.png" height='25'/>   no final de <img src="images/Imagem97.png" height='25'/>
+
+9.	Utilize o editor de consultas para consultar os registros da tabela utilizando SQL
+
+    9.1. Quantidade de registros na tabela
+
+```sql
+select count(1) from vacinas_dw;
+```
+
+    9.2. Quantidade de vacinas por UF
+
+```sql
+select sum(quantidade), uf from vacinas_dw group by uf;
+```
+
+    9.3. Registros de vacinação com mais de 1000 vacinas
+
+```sql
+select * from vacinas_dw where quantidade > 1000
+```
+
+
+10. Lembre-se de pausar o cluster Redshift quando terminar o laboratório.
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
