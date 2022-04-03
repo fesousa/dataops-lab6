@@ -133,13 +133,58 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
  
     4.2. Clique em <img src="images/Imagem38.png" height='25'/> 
 
-    4.3. Clique no botão de atualizar (<img src="images/Imagem39.png" width='100%'/>) para atualizar o status (canto superior direito)
+    4.3. Clique no botão de atualizar (<img src="images/Imagem39.png" height='25'/>) para atualizar o status (canto superior direito)
 
     4.4. Aguarde até que o Status fique `Ready` novamente. Clique no atualizar de tempos em tempos para atualizar o status e verificar
 
-    4.5. Verifique a nova tabela criada clicando em <img src="images/Imagem40.png" width='100%'/> no menu lateral esquerdo
+    4.5. Verifique a nova tabela criada clicando em <img src="images/Imagem40.png" height='25'/> no menu lateral esquerdo
 
     <img src="images/Imagem41.png" width='100%'/>
+
+
+## Consultar dados do Data Catalog com Amazon Athena
+
+1.	O Amazon Athena precisa de um bucket para armazenar os resultados de consulta. Procure pelo serviço S3 e crie um novo bucket chamado `dataops-impacta-athena-nomesobrenome`. Troque `nomesobrenome` pelo seu nome e sobrenome
+
+2.	Volte ao AWS Glue e selecione <img src="images/Imagem42.png" height='25'/> no menu lateral esquerdo 
+
+3.	Na tela das tabelas, selecione o checkbox da tabela criada
+
+<img src="images/Imagem43.png" width='100%'/>
+ 
+4.	Clique em <img src="images/Imagem44.png" height='25'/> e depois em  <img src="images/Imagem45.png" height='25'/>
+
+5.	No popup, clique em <img src="images/Imagem46.png" height='25'/> para ser redirecionado para o Amazon Athena
+
+6.	Já no Amazon Athena, clique em <img src="images/Imagem47.png" height='25'/>  no canto superior direito
+
+7.	Em <img src="images/Imagem48.png" height='25'/>  clique em <img src="images/Imagem49.png" height='25'/>
+
+8.	No novo popup, selecione o bucket criado clicando em <img src="images/Imagem50.png" height='25'/>
+
+9.	Clique em <img src="images/Imagem51.png" height='25'/>
+
+10.	Clique em <img src="images/Imagem52.png" height='25'/>
+
+11.	De volta ao editor de query do Athena (Query Editor), confira se a seção <img src="images/Imagem53.png" height='25'/> ao lado esquerdo está com o `Database`  `vacinas-database` selecionado
+
+<img src="images/Imagem54.png" width='100%'/>
+ 
+12.	Ao lado direito, no editor de consultas, verifique se já existe a seguinte consulta, para re-tornar os 10 primeiros registros:
+
+```sql
+SELECT * FROM "vacinas-database"."vacinas_input" limit 10;
+```
+
+Se não houver, coloque essa consulta no editor e clique em <img src="images/Imagem55.png" height='25'/>. Você deverá ver um resultado parecido com o seguinte:
+
+<img src="images/Imagem56.png" width='100%'/>
+
+13.	Execute uma nova consulta para retornar a quantidade de registros e veja o resultado
+
+```sql
+SELECT count(1) FROM "vacinas-database"."vacinas_input";
+```
 
 
 
