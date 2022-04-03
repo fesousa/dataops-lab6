@@ -321,10 +321,10 @@ https://github.com/fesousa/dataops-lab6/blob/2738353683fb94c7f69c79c46396e445f77
 
 8.	Na seção <img src="images/Imagem93.png" height='25'/>  verifique a configuração de conexão:
 
-    8.1. <img src="images/Imagem94.png" height='100'/>
+    8.1. <img src="images/Imagem94.png" height='70'/>
 
 
-    8.2. <img src="images/Imagem95.png" height='100'/>
+    8.2. <img src="images/Imagem95.png" height='70'/>
 
 
     8.3. Você deve ver a tabela <img src="images/Imagem96.png" height='25'/>   no final de <img src="images/Imagem97.png" height='25'/>
@@ -356,5 +356,5 @@ select * from vacinas_dw where quantidade > 1000
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 16:07:13
+Last update: 2022-04-03 16:09:11
 </div>
