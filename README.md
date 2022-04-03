@@ -86,42 +86,44 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.7. Em conexão, selecione a conexão recém criada (`s3-connection`)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8. h.	Em `Incluir caminho`, clique em <img src="images/Imagem21.png" height='25'/>  para selecionar o bucket
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.9. No popup, selecione o bucket e pasta `dataops-impacta-dados-nomesobrenome/input` (bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1))
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem21.png" width='100%'/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem22.png" width='100%'/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.7. Clique em <img src="images/Imagem22.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.7. Clique em <img src="images/Imagem23.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8. Clique em <img src="images/Imagem23.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8. Clique em <img src="images/Imagem24.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.9. Na tela seguinte, clique novamente em <img src="images/Imagem24.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.9. Na tela seguinte, clique novamente em <img src="images/Imagem25.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.10. Na próxima tela, selecione <img src="images/Imagem25.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.10. Na próxima tela, selecione <img src="images/Imagem26.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11. Em `Função do IAM` selecione <img src="images/Imagem26.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11. Em `Função do IAM` selecione <img src="images/Imagem27.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.12. Clique em <img src="images/Imagem27.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.12. Clique em <img src="images/Imagem28.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.13. Na próxima tela, verifique se a Frequência está como <img src="images/Imagem28.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.13. Na próxima tela, verifique se a Frequência está como <img src="images/Imagem29.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.14. Clique em <img src="images/Imagem29.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.14. Clique em <img src="images/Imagem30.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.15. Na tela de configuração de saída, clique em <img src="images/Imagem30.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.15. Na tela de configuração de saída, clique em <img src="images/Imagem31.png" height='25'/> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. No popup coloque no campo `Nome do banco de dados` o nome `vacinas_database`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Clique em <img src="images/Imagem31.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Clique em <img src="images/Imagem32.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.16. De volta a tela de configuração de saída, no campo <img src="images/Imagem32.png" height='25'/>  escreva `vacinas_`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.16. De volta a tela de configuração de saída, no campo <img src="images/Imagem33.png" height='25'/>  escreva `vacinas_`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.17. Clique em <img src="images/Imagem33.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.17. Clique em <img src="images/Imagem34.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.18. Revise as configurações e clique em <img src="images/Imagem34.png" height='25'/> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.18. Revise as configurações e clique em <img src="images/Imagem35.png" height='25'/> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.19. Verifique o Crawler criado na nova tela
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem35.png" width='100%'/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem36.png" width='100%'/>
 
 
 
@@ -129,5 +131,5 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 15:13:26
+Last update: 2022-04-03 15:16:44
 </div>
