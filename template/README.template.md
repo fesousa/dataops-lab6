@@ -16,7 +16,7 @@ As instruções do laboratório estão em português. Para alterar o idioma, pro
 
 ## Arquitetura da solução
 
-<img src="https://raw.github.com/fesousa/dataops-lab6/master/images/Imagem1.png" width='100%'/>
+<img src="images/Imagem1.png" width='100%'/>
 
 
 ## Configurar um VPC Endpoint para conectar com S3
@@ -25,17 +25,17 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
 1. Procure na barra superior pelo serviço `VPC` e clique no serviço para abrir
 
-2.	No menu ao lado esquerdo procure e clique em <img src="https://raw.github.com/fesousa/dataops-lab5/master/images/Imagem2.png" height='25'/>
+2.	No menu ao lado esquerdo procure e clique em <img src="images/Imagem2.png" height='25'/>
 
-3.	Depois clique em <img src="https://raw.github.com/fesousa/dataops-lab5/master/images/Imagem3.png" height='25'/>
+3.	Depois clique em <img src="images/Imagem3.png" height='25'/>
 
-4.	No campo <img src="https://raw.github.com/fesousa/dataops-lab5/master/images/Imagem4.png" height='25'/> escreva `s3` e aperte `Enter`
+4.	No campo <img src="images/Imagem4.png" height='25'/> escreva `s3` e aperte `Enter`
 
 5.	No resultado selecione a opção que tem seguintes características:
     
-    Service Name:  <img src="https://raw.github.com/fesousa/dataops-lab5/master/images/Imagem5.png" height='25'/>
+    Service Name:  <img src=images/Imagem5.png" height='25'/>
 
-    Type:  <img src="https://raw.github.com/fesousa/dataops-lab5/master/images/Imagem5.png" height='25'/>
+    Type:  <img src="images/Imagem5.png" height='25'/>
 
 
 
