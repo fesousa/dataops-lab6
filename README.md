@@ -1,3 +1,10 @@
+<style>
+.alig-img {
+    vertical-align:middle;
+}
+</style>
+
+
 # DataOps - Laboratório 6
 
 Processmento e Análise de Dados em AWS GLue
@@ -35,11 +42,11 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
     
     Service Name:  <img src="images/Imagem5.png" height='25'/>
 
-    <div class="greenBorder" style=" #position: relative; #top: -50%">
-
-    Type:  <img src="images/Imagem6.png" style="vertical-align:middle;" height='25'/>
     
-    </div>
+
+    Type:  <img src="images/Imagem6.png" class="alig-img" height='25'/>
+
+
 
 
     <img src="images/Imagem7.png" width='100%'/>
@@ -49,5 +56,5 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 14:40:25
+Last update: 2022-04-03 14:42:41
 </div>
