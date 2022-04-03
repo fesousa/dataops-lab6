@@ -210,10 +210,93 @@ A execução vai coletar dados de vacinação do Amapá e salvar no S3. Se preci
 
 
 
+## Executar ETL com Glue Job (Trabalho)
+
+1.	Na AWS, procure e abra o serviço `Glue`
+
+2.	No menu da lateral esquerda, selecione <img src="images/Imagem57.png" height='25'/>
+
+3.	Clique em  <img src="images/Imagem58.png" height='25'/>
+
+4.	Na tela <img src="images/Imagem59.png" height='25'/> , configure:
+
+    4.1. Nome: `etl-vacinas`
+    
+    4.2. Função do IAM: `LabRole`
+
+    4.3. Este trabalho executa: selecione a opção `Um script proposto gerado pelo AWS Glue`
+
+    4.4. Clique em  <img src="images/Imagem60.png" height='25'/>
+
+    4.5. Na tela <img src="images/Imagem61.png" height='25'/> selecione a opção do Data Catalog criado anteriormente (`vacinas-database`)
+
+    <img src="images/Imagem62.png" width='100%'/>
+ 
+    4.6.	Clique em <img src="images/Imagem63.png" height='25'/>
+
+    4.7. Na tela seguinte, clique novamente em <img src="images/Imagem64.png" height='25'/>
+
+    4.8. Na tela <img src="images/Imagem65.png" height='25'/> selecione a opção <img src="images/Imagem66.png" height='25'/>
+
+    4.9. Clique em  <img src="images/Imagem67.png" height='25'/>
+
+    4.10. No popup de configuração da conexão coloque:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Nome: `redshift-connection´
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Tipo de conexão: `Amazon Redshift`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Cluster: selecione o cluster criado no [Laboratório 5](https://github.com/fesousa/dataops-lab5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. Nome do banco de dados: `dev`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. Nome de usuário: `awsuser`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. Senha: coloque a senha criada para o Redshift do [Laboratório 5](https://github.com/fesousa/dataops-lab5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g. Clique em <img src="images/Imagem68.png" height='25'/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.11. Retornando a tela de destino dos dados, complete o campo `Nome do banco de dados` com `dev`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.12. Clique em <img src="images/Imagem69.png" height='25'/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.13. Na tela seguinte, clique em <img src="images/Imagem70.png" height='25'/>
+
+5.	A tela para editar o script será aberta
+6.	Coloque o script `pyspark abaixo`
+
+https://github.com/fesousa/dataops-lab6/blob/2738353683fb94c7f69c79c46396e445f77937d2/etl_vacinas.py#L1-L56
+
+7.	Depois de atualizado o script, clique em <img src="images/Imagem71.png" height='25'/> na parte superior
+
+8.	Execute o processo de ELT clicando em  <img src="images/Imagem72.png" height='25'/>
+
+9.	Acompanhe a execução do script:
+    
+    9.1. Feche o editor de script clicando em <img src="images/Imagem73.png" height='25'/> no canto superior direito
+
+    9.2. Confira se está na tela dos trabalhos do Glue, clicando em <img src="images/Imagem74.png" height='25'/> no menu lateral esquerdo
+
+    9.3. Selecione o trabalho `etl-vacinas` criado neste laboratório
+
+    9.4. Veja as execuções na parte inferior
+
+    9.5. Espere até que a execução fique com o status `Succeeded`. A execução demora cerca de 4 minutos. Clique em <img src="images/Imagem75.png" height='25'/> do painel inferior de tempos em tempos para ver a atualização
+
+
+    <img src="images/Imagem76.png" width='100%'/>
+
+    9.6. Se precisar executar novamente, com o trabalho selecionado clique em <img src="images/Imagem77.png" height='25'/> e depois em <img src="images/Imagem78.png" height='25'/>
+
+    9.7. Se precisar editar o script, clique em <img src="images/Imagem79.png" height='25'/>  e depois em <img src="images/Imagem80.png" height='25'/>
+
+ 
+
+
 
 <div class="footer">
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 15:37:28
+Last update: 2022-04-03 15:53:36
 </div>
