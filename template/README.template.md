@@ -337,13 +337,13 @@ https://github.com/fesousa/dataops-lab6/blob/2738353683fb94c7f69c79c46396e445f77
 select count(1) from vacinas_dw;
 ```
 
-    9.2. Quantidade de vacinas por UF
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.2. Quantidade de vacinas por UF
 
 ```sql
 select sum(quantidade), uf from vacinas_dw group by uf;
 ```
 
-    9.3. Registros de vacinação com mais de 1000 vacinas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.3. Registros de vacinação com mais de 1000 vacinas
 
 ```sql
 select * from vacinas_dw where quantidade > 1000
