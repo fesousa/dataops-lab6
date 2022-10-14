@@ -196,7 +196,7 @@ SELECT count(1) FROM "vacinas-database"."vacinas_input";
 
 ```json
 {
-    "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAP/part-00000-e024f7cd-7ba2-4b64-a285-ad08d98b1135.c000.csv", 
+    "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAP/part-00000-0e081da1-2126-45b3-8bfd-78667a8589af.c000.csv", 
     "uf":"ap"
 }
 ```
@@ -356,5 +356,5 @@ select * from vacinas_dw where quantidade > 1000
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2022-04-03 16:10:10
+Last update: 2022-10-14 23:00:27
 </div>
