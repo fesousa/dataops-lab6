@@ -196,7 +196,7 @@ SELECT count(1) FROM "vacinas-database"."vacinas_input";
 
 ```json
 {
-    "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAP/part-00000-7d05709a-1317-46c5-b532-3abe58cd4347.c000.csv", 
+    "url":"https://s3.sa-east-1.amazonaws.com/ckan.saude.gov.br/SIPNI/COVID/uf/uf%3DAP/part-00000-0e081da1-2126-45b3-8bfd-78667a8589af.c000.csv", 
     "uf":"ap"
 }
 ```
