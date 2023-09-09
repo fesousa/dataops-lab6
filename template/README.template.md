@@ -29,27 +29,32 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
 3.	Depois clique em <img src="images/Imagem3.png" height='25'/>
 
-4.	No campo <img src="images/Imagem4.png" height='25'/> escreva `s3` e aperte `Enter`
+4. No campo `Etiqueta de nome` coloque `s3-glue-endpoint`
 
-5.	No resultado selecione a opção que tem seguintes características:
+5. Na barra de pesquisa da seção `Serviços`  escreva `s3` e aperte `Enter`
+
+6. No resultado selecione a opção que tem seguintes características:
     
-    Service Name:  <img src="images/Imagem5.png" height='25'/>    
+    Nome do serviço: `com.amazonaws.us-east-1.s3`    
 
-    Type:  <img src="images/Imagem6.png" height='25'/>
+    Tipo: `Gateway`
 
 
     <img src="images/Imagem7.png" width='100%'/>
 
+7. Na seção `VPC` selecione a única opção disponível (`padrão`)
 
-6.	Em  <img src="images/Imagem8.png" height='25'/>  selecione o checkbox da `Route Table` disponível
+
+<img src="images/Imagem98.png" width='100%'/>
+
+
+8.	Em  `Tabelas de rotas`  selecione o checkbox da única linha disponível
 
 <img src="images/Imagem9.png" width='100%'/>
 
-7.	Clique em <img src="images/Imagem10.png" height='25'/>
+9.	Clique em <img src="images/Imagem10.png" height='25'/>
 
-8.	Na nova tela, clique em <img src="images/Imagem11.png" height='25'/>
-
-9.	Confirme o endpoint criado
+10.	Confirme o endpoint criado
 
 <img src="images/Imagem12.png" width='100%'/>
 
@@ -62,36 +67,18 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
 3.	Clique em <img src="images/Imagem14.png" height='25'/> e comece a configuração do novo Crawler
 
-    3.1. Nome do Crawler: `crawler-vacinas`
+    3.1. `Name`: `crawler-vacinas`
 
     3.2. Clique em <img src="images/Imagem15.png" height='25'/>
 
-    3.3. Na tela seguinte, clique em <img src="images/Imagem16.png" height='25'/> novamente 
+    3.3.  Na tela seguinte, clique em <img src="images/Imagem99.png" height='25'/>. No popup, configure a nova conexão:
 
-    3.4. Na tela seguinte, configure o datastore
-
-    3.5. No campo <img src="images/Imagem17.png" height='25'/>  selecione <img src="images/Imagem18.png" height='25'/>
-
-    3.6. Clique em <img src="images/Imagem19.png" height='25'/>. No popup, configure a nova conexão:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Nome: `s3-connection`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. VPC: selecione a única opção disponível
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Subrede: selecione a primeira
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. Grupo de segurança: selecione `default`
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. Clique em <img src="images/Imagem20.png" height='25'/> 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.7. Em conexão, selecione a conexão recém criada (`s3-connection`)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8. h.	Em `Incluir caminho`, clique em <img src="images/Imagem21.png" height='25'/>  para selecionar o bucket
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.9. No popup, selecione o bucket e pasta `dataops-impacta-dados-nomesobrenome/input` (bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1))
+    3.4. No popup, selecione o bucket e pasta `dataops-impacta-dados-nomesobrenome/input` (bucket criado no [Laboratório 1](https://github.com/fesousa/dataops-lab1)), clicando em <img src="images/Imagem100.png" height='25'/>. Ao escolher o bucket e a pasta, clique em <img src="images/Imagem102.png" height='25'/>
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem22.png" width='100%'/>
+    <img src="images/Imagem101.png" width='100%'/>
+
+    3.4. Ao voltar para a tela anterior, clique em  <img src="images/Imagem103.png" height='25'/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.7. Clique em <img src="images/Imagem23.png" height='25'/> 
 
@@ -193,6 +180,8 @@ SELECT count(1) FROM "vacinas-database"."vacinas_input";
 2.	Selecione a função lambda `dataops-coleta-vacinas-ci-cd` criada no [Laboratório 4](https://github.com/fesousa/dataops-lab4)
 
 3.	Teste a função com o seguinte json
+
+ OBS: O Link abaixo é dinâmico. Pegue outro link de arquivo de vacinação aqui: https://opendatasus.saude.gov.br/dataset/covid-19-vacinacao/resource/5093679f-12c3-4d6b-b7bd-07694de54173
 
 ```json
 {
