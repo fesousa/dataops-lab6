@@ -78,27 +78,18 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
 
     <img src="images/Imagem101.png" width='100%'/>
 
-    3.4. Ao voltar para a tela anterior, clique em  <img src="images/Imagem103.png" height='25'/>
+    3.5. Ao voltar para a tela anterior, clique em  <img src="images/Imagem103.png" height='25'/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.7. Clique em <img src="images/Imagem23.png" height='25'/> 
+    3.6. Clique em <img src="images/Imagem15.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.8. Clique em <img src="images/Imagem24.png" height='25'/> 
+    3.7. Em `IAM Role` selecione `Lab Role`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.9. Na tela seguinte, clique novamente em <img src="images/Imagem25.png" height='25'/> 
+    3.8. Clique em <img src="images/Imagem15.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.10. Na próxima tela, selecione <img src="images/Imagem26.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.11. Em `Função do IAM` selecione <img src="images/Imagem27.png" height='25'/> 
+    3.9. Na tela `Set output and scheduling`, clique em <img src="images/Imagem31.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.12. Clique em <img src="images/Imagem28.png" height='25'/> 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.13. Na próxima tela, verifique se a Frequência está como <img src="images/Imagem29.png" height='25'/> 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.14. Clique em <img src="images/Imagem30.png" height='25'/> 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.15. Na tela de configuração de saída, clique em <img src="images/Imagem31.png" height='25'/> 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. No popup coloque no campo `Nome do banco de dados` o nome `vacinas_database`
+        a. No nova tela coloque no campo `Nome do banco de dados` o nome `vacinas_database`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Clique em <img src="images/Imagem32.png" height='25'/> 
 
@@ -345,5 +336,5 @@ select * from vacinas_dw where quantidade > 1000
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-09-09 22:18:47
+Last update: 2023-09-10 20:04:22
 </div>
