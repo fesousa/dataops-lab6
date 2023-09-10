@@ -87,35 +87,35 @@ Para o Crawler do AWS Glue poder ler os dados do S3 é preciso criar um VPC Endp
     3.8. Clique em <img src="images/Imagem15.png" height='25'/> 
 
 
-    3.9. Na tela `Set output and scheduling`, clique em <img src="images/Imagem31.png" height='25'/> 
+    3.9. Na tela `Set output and scheduling`, clique em <img src="images/Imagem31.png" height='25'/>. Uma nova aba será aberta.
+    
+    3.10 Na nova aba coloque no campo `Name` o nome `vacinas_database` e clique em  <img src="images/Imagem32.png" height='25'/> 
 
-        a. No nova tela coloque no campo `Nome do banco de dados` o nome `vacinas_database`
+    3.11. Volte para a aba onde está criando o crawler e clique em <img src="images/Imagem104.png" height='25'/> para atualizar as opções de `Target database`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Clique em <img src="images/Imagem32.png" height='25'/> 
+    3.12. Em `Target database` selecione o database que acabou de criar (`vacinas_database`)
+    
+    3.13. No campo `Table name prefix`  escreva `vacinas_`
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.16. De volta a tela de configuração de saída, no campo <img src="images/Imagem33.png" height='25'/>  escreva `vacinas_`
+    3.14. Clique em <img src="images/Imagem34.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.17. Clique em <img src="images/Imagem34.png" height='25'/> 
+    3.15. Revise as configurações e clique em <img src="images/Imagem35.png" height='25'/> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.18. Revise as configurações e clique em <img src="images/Imagem35.png" height='25'/> 
+    3.16. Verifique o Crawler criado na nova tela
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.19. Verifique o Crawler criado na nova tela
+    <img src="images/Imagem36.png" width='100%'/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Imagem36.png" width='100%'/>
 
-4. Execute o Crawler
 
-    4.1. Selecione o checkbox ao no registro do Crawler criado
+    3.17. Ainda nessa tela, execute o crawler clicando em  <img src="images/Imagem38.png" height='25'/>. A execuceção começará e poderá ser acompanhada no final da página, na seção `Crawler runs`
 
-    <img src="images/Imagem37.png" width='100%'/>
- 
-    4.2. Clique em <img src="images/Imagem38.png" height='25'/> 
+    <img src="images/Imagem105.png" width='100%'/>
+   
+    3.18. Aguarde até que o Status fique `Completed` 
 
-    4.3. Clique no botão de atualizar (<img src="images/Imagem39.png" height='25'/>) para atualizar o status (canto superior direito)
+     <img src="images/Imagem105.png" width='100%'/>
 
-    4.4. Aguarde até que o Status fique `Ready` novamente. Clique no atualizar de tempos em tempos para atualizar o status e verificar
-
-    4.5. Verifique a nova tabela criada clicando em <img src="images/Imagem40.png" height='25'/> no menu lateral esquerdo
+    3.19 Verifique a nova tabela criada clicando em `Tables` (`Data Catalog --> Database --> Tables`)
 
     <img src="images/Imagem41.png" width='100%'/>
 
@@ -336,5 +336,5 @@ select * from vacinas_dw where quantidade > 1000
     &copy; 2022 Fernando Sousa
     <br/>
     
-Last update: 2023-09-10 20:07:32
+Last update: 2023-09-10 20:22:28
 </div>
