@@ -208,7 +208,7 @@ A execução vai coletar dados de vacinação do Amapá e salvar no S3. Se preci
 4. Na nova tela, coloque o script `pyspark abaixo`
 
 ```python
-${etl_vacinas.sql}
+${etl_vacinas.py}
 ```
 
     4.1. No código verifique se está de acordo com o que está no seu ambiente:
