@@ -211,56 +211,118 @@ A execução vai coletar dados de vacinação do Amapá e salvar no S3. Se preci
 ${etl_vacinas.sql}
 ```
 
-    4.1. No código verifique se está de acordo com o que está no seu ambiente:
+4.	Na tela <img src="images/Imagem59.png" height='25'/> , configure:
 
-        * Linha 41: database = "vacinas_database", table_name = "vacinas_input". Deve estar de acordo com o que está em seu data catalog
-
-5. Na parte superior onde está escrito `Unitled Job`, edite o nome do job para `etl_vacinas`
-
-<img src="images/Imagem109.png" width='100%'/>
-
-6. Clique na aba `Job details` e configure:
-
-    6.1. `IAM Role`: selecione `LabRole`]
-
-    6.2. Na seção `Connections` (deve expandir `Advanced properties`) clique no link `AWS Glue` para abrir uma nova aba e adicionar a conexão do Redshift
-
-    <img src="images/Imagem110.png" width='100%'/>
-
-    6.3. Na nova aba, na seção `Connections` clique em `Create connection`
-
-    <img src="images/Imagem111.png" width='100%'/>
-
-    6.4. Em `Name` coloque `redshift-connection` (preste atenção neste nome. É o que está configurado no script do Job [linha 65]. Se for diferente, a execução vai falhar)
-
-    6.5. Em `Connection type` escolha `Amazon Redshift`
-
-    6.6. Em `Connection access` configure o cluster redshift criado no labortório 5. Você só precisa escolher `Database instances` e `Password`, os outros campos ficam iguais. Se não lembra a senha, altere no redshift.
-
-    6.7. Clique em `Create connection`
-
-    6.8. Volte a aba onde está configurando o job e selecione a conexão criada. Se não aparecer, clique no botão de atualizar ao lado do campo de opções
-
-    <img src="images/Imagem112.png" width='100%'/>
-
-
-7.	Clique em <img src="images/Imagem71.png" height='25'/> na parte superior
-
-8.	Clique em <img src="images/Imagem113.png" height='25'/> na parte superior
-
-9.	Acompanhe a execução do script clicando na aba `Runs`:    
+    4.1. Nome: `etl-vacinas`
     
-    9.1. Espere até que a execução fique com o status `Succeeded`. A execução demora cerca de 4 minutos. Clique em <img src="images/Imagem75.png" height='25'/> de tempos em tempos para ver a atualização
+    4.2. Função do IAM: `LabRole`
+
+    4.3. Este trabalho executa: selecione a opção `Um script proposto gerado pelo AWS Glue`
+
+    4.4. Clique em  <img src="images/Imagem60.png" height='25'/>
+
+    4.5. Na tela <img src="images/Imagem61.png" height='25'/> selecione a opção do Data Catalog criado anteriormente (`vacinas-database`)
+
+    <img src="images/Imagem62.png" width='100%'/>
+ 
+    4.6.	Clique em <img src="images/Imagem63.png" height='25'/>
+
+    4.7. Na tela seguinte, clique novamente em <img src="images/Imagem64.png" height='25'/>
+
+    4.8. Na tela <img src="images/Imagem65.png" height='25'/> selecione a opção <img src="images/Imagem66.png" height='25'/>
+
+    4.9. Clique em  <img src="images/Imagem67.png" height='25'/>
+
+    4.10. No popup de configuração da conexão coloque:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Nome: `redshift-connection´
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Tipo de conexão: `Amazon Redshift`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c. Cluster: selecione o cluster criado no [Laboratório 5](https://github.com/fesousa/dataops-lab5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. Nome do banco de dados: `dev`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. Nome de usuário: `awsuser`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f. Senha: coloque a senha criada para o Redshift do [Laboratório 5](https://github.com/fesousa/dataops-lab5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g. Clique em <img src="images/Imagem68.png" height='25'/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.11. Retornando a tela de destino dos dados, complete o campo `Nome do banco de dados` com `dev`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.12. Clique em <img src="images/Imagem69.png" height='25'/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.13. Na tela seguinte, clique em <img src="images/Imagem70.png" height='25'/>
+
+5.	A tela para editar o script será aberta
+6.	Coloque o script `pyspark abaixo`
+
+https://github.com/fesousa/dataops-lab6/blob/2738353683fb94c7f69c79c46396e445f77937d2/etl_vacinas.py#L1-L56
+
+7.	Depois de atualizado o script, clique em <img src="images/Imagem71.png" height='25'/> na parte superior
+
+8.	Execute o processo de ELT clicando em  <img src="images/Imagem72.png" height='25'/>
+
+9.	Acompanhe a execução do script:
+    
+    9.1. Feche o editor de script clicando em <img src="images/Imagem73.png" height='25'/> no canto superior direito
+
+    9.2. Confira se está na tela dos trabalhos do Glue, clicando em <img src="images/Imagem74.png" height='25'/> no menu lateral esquerdo
+
+    9.3. Selecione o trabalho `etl-vacinas` criado neste laboratório
+
+    9.4. Veja as execuções na parte inferior
+
+    9.5. Espere até que a execução fique com o status `Succeeded`. A execução demora cerca de 4 minutos. Clique em <img src="images/Imagem75.png" height='25'/> do painel inferior de tempos em tempos para ver a atualização
 
 
     <img src="images/Imagem76.png" width='100%'/>
 
-    9.2. Lembre-se de iniciar o cluster redshift antes de excutar o processo
+    9.6. Se precisar executar novamente, com o trabalho selecionado clique em <img src="images/Imagem77.png" height='25'/> e depois em <img src="images/Imagem78.png" height='25'/>
+
+    9.7. Se precisar editar o script, clique em <img src="images/Imagem79.png" height='25'/>  e depois em <img src="images/Imagem80.png" height='25'/>
+
+ 
+## Verificar tabela no Redshift e Executar Consultas
+
+1.	Na AWS, procure e abra o serviço `Redshift`
+
+2.	No menu lateral esquerdo clique em <img src="images/Imagem81.png" height='25'/> e depois em <img src="images/Imagem82.png" height='25'/> para abrir os clusters do Redshift
+
+3. Inicie o cluster caso ele estiver parado
+
+    3.1. Selecione o cluster criado no [Laboratório 5](https://github.com/fesousa/dataops-lab5) clicando no checkbox
+
+    <img src="images/Imagem83.png" width='100%'/>
+ 
+    3.2. Clique em  <img src="images/Imagem84.png" height='25'/> e depois em <img src="images/Imagem85.png" height='25'/>
+
+    3.3. Na próxima tela clique em <img src="images/Imagem86.png" height='25'/> 
+
+    3.4. Espere até que a coluna `Status` do cluster mostre <img src="images/Imagem87.png" height='25'/>
+
+4.	Depois que o cluster estiver executando, no menu lateral esquerdo clique em <img src="images/Imagem88.png" height='25'/> e depois em <img src="images/Imagem89.png" height='25'/>
+
+5.	Clique em <img src="images/Imagem90.png" height='25'/>
+
+6.	Configure a conexão como na imagem abaixo:
+
+<img src="images/Imagem91.png" width='100%'/>
+ 
+7.	Clique em <img src="images/Imagem92.png" height='25'/>
+
+8.	Na seção <img src="images/Imagem93.png" height='25'/>  verifique a configuração de conexão:
+
+    8.1. <img src="images/Imagem94.png" height='70'/>
 
 
-10. Abra o redshift e verifique a tabela criada pelo editor de consultas
+    8.2. <img src="images/Imagem95.png" height='70'/>
 
-11.	Utilize o editor de consultas para consultar os registros da tabela utilizando SQL
+
+    8.3. Você deve ver a tabela <img src="images/Imagem96.png" height='25'/>   no final de <img src="images/Imagem97.png" height='25'/>
+
+9.	Utilize o editor de consultas para consultar os registros da tabela utilizando SQL
 
     9.1. Quantidade de registros na tabela
 
@@ -281,7 +343,7 @@ select * from vacinas_dw where quantidade > 1000
 ```
 
 
-12. Lembre-se de pausar o cluster Redshift quando terminar o laboratório.
+10. Lembre-se de pausar o cluster Redshift quando terminar o laboratório.
 
 <div class="footer">
     &copy; 2022 Fernando Sousa

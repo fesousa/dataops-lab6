@@ -44,11 +44,21 @@ datasource = glueContext.create_dynamic_frame.from_catalog(database = "vacinas_d
 transformacao1 = Map.apply(frame=datasource, f=transformaDose, transformation_ctx="transformacao1")
 
 # Mapeamento das colunas para outros nomes, conversão de tipos e remover colunas desnecessárias
-transformacao2 = ApplyMapping.apply(frame = transformacao1, mappings = [("paciente_enumsexobiologico", "string", "sexo", "string"), ("estabelecimento_municipio_nome", "string", "municipio", "string"), ("estabelecimento_uf", "string", "uf", "string"), ("vacina_dataaplicacao", "string", "data_aplicacao", "date"), ("dose", "string", "dose", "string"), ("vacina_nome", "string", "vacina", "string")], transformation_ctx = "transformacao2")
+transformacao2 = ApplyMapping.apply(
+    frame = transformacao1,
+    mappings = [
+        ("paciente_enumSexoBiologico", "string", "sexo", "string"), 
+        ("estabelecimento_municipio_nome", "string", "municipio", "string"), 
+        ("estabelecimento_uf", "string", "uf", "string"), 
+        ("vacina_dataAplicacao", "string", "data_aplicacao", "date"), 
+        ("dose", "string", "dose", "string"), 
+        ("vacina_nome", "string", "vacina", "string")
+    ], 
+    transformation_ctx = "transformacao2"
+)
 
 # Agrupamento e contagem dos registros por sexo, municipio, up, dose, vacina e data de aplicação
 transformacao3 = sparkSqlQuery(glueContext, query = sqlGroupData, mapping = {"myDataSource": transformacao2}, transformation_ctx = "transformacao3")
-
 
 
 # Salvar dados no Redshift
