@@ -284,7 +284,7 @@ select * from vacinas_dw where quantidade > 1000
 12. Lembre-se de pausar o cluster Redshift quando terminar o laboratório.
 
 <div class="footer">
-    &copy; 2022 Fernando Sousa
+    &copy; 2023 Fernando Sousa
     <br/>
     {{update}}
 </div>
