@@ -258,7 +258,7 @@ ${etl_vacinas.sql}
     9.2. Lembre-se de iniciar o cluster redshift antes de excutar o processo
 
 
-10. Abra o redshift e verifique a tabela criada pelo editor de consultas
+10. Abra o redshift e verifique a tabela `vacinas_dw` criada pelo editor de consultas
 
 11.	Utilize o editor de consultas para consultar os registros da tabela utilizando SQL
 
